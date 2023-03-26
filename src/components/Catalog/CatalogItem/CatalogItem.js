@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const CatalogItem = ({
-  title,
-  imgUrl,
-  author,
-  description
-}) => {
+export const CatalogItem = ({ title, imgUrl, author, description, _id }) => {
   return (
     <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
       <div className="page-wrapper">
@@ -13,12 +8,8 @@ export const CatalogItem = ({
           <div className="blog-box row">
             <div className="col-md-4">
               <div className="post-media">
-                <Link to="/details" title="">
-                  <img
-                    src={imgUrl}
-                    alt=""
-                    className="img-fluid"
-                  />
+                <Link to={`/catalog/${_id}`} title="">
+                  <img src={imgUrl} alt="" className="img-fluid" />
                   <div className="hovereffect"></div>
                 </Link>
               </div>
@@ -33,13 +24,11 @@ export const CatalogItem = ({
                 <i className="fa fa-star"></i>
               </div>
               <h4>
-                <Link to="/details" title="">
+                <Link to={`/catalog/${_id}`} title="">
                   {title}
                 </Link>
               </h4>
-              <p>
-                {description}
-              </p>
+              <p>{description}</p>
               <small>
                 <Link to="blog-category-01.html" title="">
                   Food
