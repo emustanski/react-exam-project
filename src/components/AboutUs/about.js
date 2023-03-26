@@ -14,9 +14,9 @@ export const About = () => {
                   <div className="col-lg-4">
                     <h4>Who we are</h4>
                     <p>
-                      RecipeList is a personal blog for handcrafted, cameramade
-                      photography content, fashion styles from independent
-                      creatives around the world.
+                    Fusce dapibus nunc quis quam tempor vestibulum sit amet
+                      consequat enim. Pellentesque blandit hendrerit placerat.
+                      Integertis non.
                     </p>
                   </div>
 
@@ -25,12 +25,12 @@ export const About = () => {
                     <p>
                       Etiam vulputate urna id libero auctor maximus. Nulla
                       dignissim ligula diam, in sollicitudin ligula congue quis
-                      turpis dui urna nibhs.{" "}
+                      turpis dui urna nibhs.
                     </p>
                   </div>
 
                   <div className="col-lg-4">
-                    <h4>Pre-Sale Question</h4>
+                    <h4>Where you can find us ?</h4>
                     <p>
                       Fusce dapibus nunc quis quam tempor vestibulum sit amet
                       consequat enim. Pellentesque blandit hendrerit placerat.

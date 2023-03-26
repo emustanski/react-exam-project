@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <div>
@@ -12,13 +11,10 @@ export const Header = () => {
             />
           </a>
           <p>
-            Each year we've hosted the Best Food Blog Awards, we're astounded at
-            the depth, variety, creativity, and ingenuity of the food blogs
-            nominated..
+          Fusce dapibus nunc quis quam tempor vestibulum sit amet
+                      consequat enim. Pellentesque blandit hendrerit placerat.
+                      Integertis non. 
           </p>
-          <Link to="/details" className="btn btn-primary">
-            View Recipes
-          </Link>
         </div>
       </section>
 
@@ -74,7 +70,7 @@ export const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="/about">
-                    Contact Me
+                    About Us
                   </a>
                 </li>
               </ul>
