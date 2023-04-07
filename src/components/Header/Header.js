@@ -1,19 +1,22 @@
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
+import { Link } from "react-router-dom";
+
 export const Header = () => {
+  const { isAuthenticated, userEmail } = useContext(AuthContext)
   return (
     <div>
       <section id="cta" className="jumbotron text-center">
         <div className="container">
-          <a href="food-index.html">
+          <Link to="/">
             <img
               src="/styles/images/version/food-logo.png"
               alt=""
               className="img-fluid"
             />
-          </a>
+          </Link>
           <p>
-          Fusce dapibus nunc quis quam tempor vestibulum sit amet
-                      consequat enim. Pellentesque blandit hendrerit placerat.
-                      Integertis non. 
+          All things you need to know about food in one place
           </p>
         </div>
       </section>
@@ -38,41 +41,46 @@ export const Header = () => {
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/catalog">
-                    Recipes
-                  </a>
+                  <Link className="nav-link" to="/catalog">
+                    Catalog
+                  </Link>
+                </li>
+                
+                {isAuthenticated && (
+                  <div className="navbar-nav">
+                <li className="nav-item">
+                <Link className="nav-link" to="/profile">Profile {userEmail}</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/login">
-                    {" "}
-                    Login
-                  </a>
+                <Link className="nav-link" to="/create">Create</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/register">
-                    Register
-                  </a>
+                <Link className="nav-link" to="/logout">Logout</Link>
+                </li>
+                </div>
+                )}
+
+                {!isAuthenticated && (
+                  <div className="navbar-nav">
+                    <li className="nav-item">
+                <Link className="nav-link" to="/login">Login</Link>  
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="food-category.html">
-                    Profile
-                  </a>
+                  <Link className="nav-link" to="/register">Register</Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/create">
-                    Create
-                  </a>
-                </li>
-                <li className="nav-item">
+                
+                </div>
+                )}
+                {/* <li className="nav-item">
                   <a className="nav-link" href="/about">
                     About Us
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

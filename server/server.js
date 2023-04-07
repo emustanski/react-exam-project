@@ -1333,33 +1333,26 @@
         }
     };
     var seedData = {
-        games: {
+        posts: {
+            "ff436770-76c5-40e2-b231-77409eda7a60": {
+                "title": "Chinese fried rice ",
+                "imgUrl": "https://d1e3z2jco40k3v.cloudfront.net/-/media/project/oneweb/mccormick-us/mccormick/recipe-categories/e/800x800/easy_fried_rice_0141_800x800.jpg?rev=00cc8494e40c4ad5b7fdfc836e3801e3&vd=20230218T224439Z&hash=685B67F7596C81A0EAFB82454907F308",
+                "description": "There are a few different seasonings that make fried rice taste just right. The most important sauces to add are soy sauce, oyster sauce, and fish sauce in fried rice. All three add unique flavors to rice, but it can be easy to go overboard. Make sure you add small amounts of each and regularly taste the rice.",
+            },
             "ff436770-76c5-40e2-b231-77409eda7a61": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "title": "Italian cuisine",
+                "imgUrl": "https://www.buchdiscounter.eu/media/image/product/19993/lg/italian-food-machs-doch-einfach-geb-ausg-maengelexemplar.jpg",
+                "description": "Italian cuisine (Italian: cucina italiana, pronounced [kuˈtʃiːna itaˈljaːna]) is a Mediterranean cuisine[1] consisting of the ingredients, recipes and cooking techniques developed across the Italian Peninsula and later spread around the world together with waves of Italian diaspora.[2][3][4] Some of these foods were imported from other cultures. Significant changes occurred with the colonization of the Americas and the introduction of potatoes, tomatoes, capsicums, maize and sugar beet — the latter introduced in quantity in the 18th century.[5][6] It is one of the best-known and most appreciated gastronomies worldwide.[7]",
+            },
+            "ff436770-76c5-40e2-b231-77409eda7a62": {
                 "title": "CoverFire",
-                "category": "Action",
-                "maxLevel": "70",
-                "imageUrl": "/images/CoverFire.png",
-                "summary": "Best action shooter game, easy controls, realistic 3D graphics and fun offline missions. Get your best shooting gun and take to action!",
-                "_createdOn": 1617194128618,
+                "imgUrl": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX32628844.jpg",
+                "description": "Balkan cuisine is a type of regional cuisine that combines characteristics of European cuisine with some of those from Western Asia. It is found in the Balkan Peninsula of Southeast Europe, a region without clear boundaries but which is generally considered to at least include the modern countries of Albania, Bulgaria, Romania and Greece and the former Yugoslavia, with the possible exception of Slovenia and northern inland regions of Croatia.[1]",
             },
-            "1840a313-225c-416a-817a-9954d4609f7c": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "title": "MineCraft",
-                "category": "Arcade",
-                "maxLevel": "250",
-                "imageUrl": "/images/MineCraft.png",
-                "summary": "Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for. Set in a world where fantasy creatures live side by side with humans. A human cop is forced to work with an Orc to find a weapon everyone is prepared to kill for.",
-                "_createdOn": 1617194210928,
-            },
-            "126777f5-3277-42ad-b874-76d043b069cb": {
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "title": "Zombie Lang",
-                "category": "Vertical Shooter",
-                "maxLevel": "100",
-                "imageUrl": "/images/ZombieLang.png",
-                "summary": "With it’s own unique story, set between the events of the first movie, Zombieland: Double Tap- Road Trip is a ridiculously fun top-down twin-stick shooter featuring local co-op multiplayer for up to four players. Play as your favorite heroes from the original — Tallahassee, Columbus, Wichita and Little Rock — as well as new unlockable characters from the upcoming sequel.  The game embraces the game-like elements seen in the film by  incorporating everything from the “Rules” to “Zombie Kill of the Week”.  Use your special abilities, an arsenal of weapons and the essential Zombieland rules for survival to stay alive against huge numbers of uniquely grotesque and dangerous undead monstrosities in Zombieland: Double Tap- Road Trip’s story-based campaign mode, wave-based horde mode, and boss battles.",
-                "_createdOn": 1617194295474,
+            "ff436770-76c5-40e2-b231-77409eda7a63": {
+                "title": "Healthy Food",
+                "imgUrl": "https://images.squarespace-cdn.com/content/v1/5f2a7e835f5e316f4ffb3cf6/1598274192927-FB512MN1ADSZ8SNKZHE4/3.png?format=1000w",
+                "description": "A vast number of foods are both healthy and tasty. By filling your plate with fruits, vegetables, quality protein sources, and other whole foods, you’ll have meals that are colorful, versatile, and good for you.",
             }
         },
         comments: {

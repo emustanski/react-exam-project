@@ -28,12 +28,9 @@ export const CatalogItem = ({ title, imgUrl, author, description, _id }) => {
                   {title}
                 </Link>
               </h4>
+              <div className="short-description">
               <p>{description}</p>
-              <small>
-                <Link to="blog-category-01.html" title="">
-                  Food
-                </Link>
-              </small>
+              </div>
               <small>
                 <Link to="food-single.html" title="">
                   11 July, 2017

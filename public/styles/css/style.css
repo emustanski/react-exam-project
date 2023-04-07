@@ -413,6 +413,9 @@ div.tab button:hover {
     position: relative;
     background-color: #ffffff;
 }
+.home-p {
+    font-weight: 800;
+}
 
 .section.lb {
     background-color: #edeff2;

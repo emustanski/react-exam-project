@@ -1711,8 +1711,8 @@ pre code {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 66.666667%;
         -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+            flex: 100%;
+    max-width: 100%;
   }
   .col-lg-9 {
     -webkit-box-flex: 0;

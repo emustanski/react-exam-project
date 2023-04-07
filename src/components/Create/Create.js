@@ -1,24 +1,18 @@
-import { useState } from "react";
+import { useForm } from "../../hooks/useForm";
 
 export const Create = ({ onCreateSubmit }) => {
-  const [values, setValues] = useState({
-    title: "",
-    imgUrl: "",
-    description: "",
-  });
+  const { values, changeHandler, onSubmit } = useForm(
+    {
+      title: '',
+      imgUrl: '',
+      description: '',
+    },
+    onCreateSubmit
+  );
 
-  const onChangeHandler = (e) => {
-    setValues((state) => ({ ...state, [e.target.name]: e.target.value }));
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    onCreateSubmit(values);
-  };
   return (
     <section className="section wb">
-      <form id="create" onSubmit={onSubmit}>
+      <form id="create" method="post" onSubmit={onSubmit}>
         <div className="container">
           <div className="col-lg-10 offset-lg-1">
             <div className="row">
@@ -34,24 +28,17 @@ export const Create = ({ onCreateSubmit }) => {
                   <label>Title</label>
                   <input
                     value={values.title}
-                    onChange={onChangeHandler}
+                    onChange={changeHandler}
                     type="text"
                     className="form-control"
                     placeholder="Choose your post title"
                     name="title"
                     id="title"
                   />
-                  {/* <input value={values.}
-                  type="text"
-                  className="form-control"
-                  placeholder=""
-                  name="title"
-                  id="title"
-                /> */}
                   <label>Image</label>
                   <input
                     value={values.imgUrl}
-                    onChange={onChangeHandler}
+                    onChange={changeHandler}
                     type="text"
                     className="form-control"
                     placeholder=""
@@ -61,7 +48,7 @@ export const Create = ({ onCreateSubmit }) => {
                   <label>Description</label>
                   <textarea
                     value={values.description}
-                    onChange={onChangeHandler}
+                    onChange={changeHandler}
                     className="form-control"
                     placeholder="Your post or recipe content"
                     name="description"

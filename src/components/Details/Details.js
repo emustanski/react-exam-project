@@ -1,17 +1,31 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
-import * as postService from "../../services/postService";
+import { postServiceFactory } from "../../services/postService";
+import { useService } from "../../hooks/useService";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export const Details = () => {
+  const { userId } = useContext(AuthContext)
   const { postId } = useParams();
   const [post, setPost] = useState({});
+  const postService = useService(postServiceFactory)
+  const navigate = useNavigate()
 
   useEffect(() => {
-    postService.getOne(postId).then((result) => {
+    postService.getOne(postId).then(result => {
       setPost(result);
     });
   }, [postId]);
+
+  const isOwner = post._ownerId === userId;
+
+  const onClickDelete = async () => {
+    await postService.delete(post._id)
+
+    navigate('/')
+  }
 
   return (
     <section className="section">
@@ -52,14 +66,16 @@ export const Details = () => {
               </div>
 
               <div className="blog-content">{<p>{post.description}</p>}</div>
+              {isOwner && (
               <div className="blog-title-area">
-                <button type="submit" className="btn btn-primary">
+                <Link to={`/catalog/${post._id}/edit`} className="btn btn-primary">
                   Edit
-                </button>
-                <button type="submit" className="btn btn-primary">
+                </Link>
+                <button className="btn btn-primary" onClick={onClickDelete}>
                   Delete
                 </button>
-              </div>
+              </div>)}
+              
 
               <div className="custombox authorbox clearfix">
                 <h4 className="small-title">About author</h4>

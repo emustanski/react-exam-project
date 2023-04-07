@@ -1,22 +1,38 @@
-import * as request from "./requester";
+import { requestFactory } from "./requester";
 
-const url = "http://localhost:3030/jsonstore/posts";
+const url = "http://localhost:3030/data/posts";
 
-export const getAll = async () => {
-  const result = await request.get(url);
-  const posts = Object.values(result);
+export const postServiceFactory = (token) => {
+  const request = requestFactory(token);
 
-  return posts;
-};
+  const getAll = async () => {
+    const result = await request.get(url);
+    const posts = Object.values(result);
 
-export const create = async (postData) => {
-  const result = await request.post(url, postData);
+    return posts;
+  };
 
-  return result;
-};
+  const create = async (postData) => {
+    const result = await request.post(url, postData);
 
-export const getOne = async (postId) => {
-  const result = await request.get(`${url}/${postId}`);
+    return result;
+  };
 
-  return result;
+  const getOne = async (postId) => {
+    const result = await request.get(`${url}/${postId}`);
+
+    return result;
+  };
+
+  const edit = (postId, data) => request.put(`${url}/${postId}`, data)
+  
+  const deletePost = (postId) => request.del(`${url}/${postId}`);
+
+  return {
+    getAll,
+    create,
+    getOne,
+    edit,
+    delete: deletePost,
+  }
 };
