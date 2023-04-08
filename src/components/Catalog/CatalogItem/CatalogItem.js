@@ -16,31 +16,16 @@ export const CatalogItem = ({ title, imgUrl, author, description, _id }) => {
             </div>
 
             <div className="blog-meta big-meta col-md-8">
-              <div className="rating">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
               <h4>
                 <Link to={`/catalog/${_id}`} title="">
                   {title}
                 </Link>
               </h4>
               <div className="short-description">
-              <p>{description}</p>
+                <p>{description}</p>
               </div>
-              <small>
-                <Link to="food-single.html" title="">
-                  11 July, 2017
-                </Link>
-              </small>
-              <small>
-                <Link to="blog-author.html" title="">
-                  by Matilda
-                </Link>
-              </small>
+              <small>11 July, 2017</small>
+              <small>by Matilda</small>
             </div>
           </div>
         </div>

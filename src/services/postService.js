@@ -26,7 +26,7 @@ export const postServiceFactory = (token) => {
 
   const edit = (postId, data) => request.put(`${url}/${postId}`, data)
   
-  const deletePost = (postId) => request.del(`${url}/${postId}`);
+  const deletePost = (postId) => request.delete(`${url}/${postId}`);
 
   return {
     getAll,

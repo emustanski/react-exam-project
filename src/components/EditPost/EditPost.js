@@ -3,12 +3,12 @@ import { useForm } from "../../hooks/useForm";
 import { useEffect } from "react";
 import { postServiceFactory } from "../../services/postService";
 import { useService } from "../../hooks/useService";
+import { usePostContext } from "../../contexts/postContext";
 
-export const EditPost = ({
-    onEditSubmit,
-}) => {
-    const postService =  useService(postServiceFactory)
+export const EditPost = () => {
+    const { onEditSubmit } = usePostContext();
     const { postId } = useParams();
+    const postService =  useService(postServiceFactory)
     const { values, changeHandler, onSubmit, changeValues } = useForm({
         _id: '',
         title: '',

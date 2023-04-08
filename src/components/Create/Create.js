@@ -1,6 +1,8 @@
+import { usePostContext } from "../../contexts/postContext";
 import { useForm } from "../../hooks/useForm";
 
-export const Create = ({ onCreateSubmit }) => {
+export const Create = () => {
+  const { onCreateSubmit } = usePostContext()
   const { values, changeHandler, onSubmit } = useForm(
     {
       title: '',

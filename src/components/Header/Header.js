@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const { isAuthenticated, userEmail } = useContext(AuthContext)
+  const { isAuthenticated, userEmail } = useAuthContext()
   return (
     <div>
       <section id="cta" className="jumbotron text-center">

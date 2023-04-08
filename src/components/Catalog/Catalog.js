@@ -1,8 +1,9 @@
+import { usePostContext } from "../../contexts/postContext";
 import { CatalogItem } from "./CatalogItem/CatalogItem";
 
-export const Catalog = ({
-  posts,
-}) => {
+export const Catalog = () => {
+  
+  const { posts } = usePostContext()
   return (
     <section className="section lb">
       <div className="container">
