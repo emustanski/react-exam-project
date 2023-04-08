@@ -28,11 +28,18 @@ export const postServiceFactory = (token) => {
   
   const deletePost = (postId) => request.delete(`${url}/${postId}`);
 
+  const getUserPosts = async (userId) => {
+    const encodedUrl = encodeURIComponent(`="${userId}"`)
+    const result = await request.get(`${url}?where=_ownerId${encodedUrl}`)
+    return result;
+  }
+
   return {
     getAll,
     create,
     getOne,
     edit,
     delete: deletePost,
+    getUserPosts
   }
 };

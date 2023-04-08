@@ -14,6 +14,7 @@ export const PostProvider = ({ children }) => {
     postService.getAll().then(result => {
       setPosts(result);
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onCreateSubmit = async (data) => {
@@ -37,11 +38,17 @@ export const PostProvider = ({ children }) => {
     setPosts(state => state.filter(post => post._id !== postId));
   };
 
+  const getPost = (postId) => {
+    return posts.find(post => post._id === postId)
+  }
+
   const context = {
     posts,
     onCreateSubmit,
     onEditSubmit,
     deletePost,
+    getPost,
+
   };
 
   return (

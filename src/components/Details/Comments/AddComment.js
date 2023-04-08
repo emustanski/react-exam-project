@@ -17,7 +17,8 @@ export const AddComment = ({ onCommentSubmit }) => {
             <textarea
               className="form-control"
               placeholder="Your comment"
-              values={values.comment}
+              name="comment"
+              value={values.comment}
               onChange={changeHandler}
             ></textarea>
             <button type="submit" className="btn btn-primary">

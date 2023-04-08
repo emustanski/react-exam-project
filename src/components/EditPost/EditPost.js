@@ -20,6 +20,7 @@ export const EditPost = () => {
         postService.getOne(postId).then(result => {
             changeValues(result)
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [postId])
 
   return (

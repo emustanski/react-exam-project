@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const CatalogItem = ({ title, imgUrl, author, description, _id }) => {
+export const CatalogItem = ({ _id, title, imgUrl, description, }) => {
   return (
     <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
       <div className="page-wrapper">
@@ -14,7 +14,7 @@ export const CatalogItem = ({ title, imgUrl, author, description, _id }) => {
                 </Link>
               </div>
             </div>
-
+    
             <div className="blog-meta big-meta col-md-8">
               <h4>
                 <Link to={`/catalog/${_id}`} title="">
@@ -25,7 +25,7 @@ export const CatalogItem = ({ title, imgUrl, author, description, _id }) => {
                 <p>{description}</p>
               </div>
               <small>11 July, 2017</small>
-              <small>by Matilda</small>
+              <small></small>
             </div>
           </div>
         </div>

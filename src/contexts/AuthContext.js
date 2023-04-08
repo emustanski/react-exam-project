@@ -1,4 +1,4 @@
-import { createContext, useContext, useState} from "react";
+import { createContext, useContext} from "react";
 
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { authServiceFactory } from "../services/authService";
@@ -59,11 +59,11 @@ export const AuthProvider = ({
       };
 
     return (
-    
+      <>
         <AuthContext.Provider value={context}> 
             {children}
         </AuthContext.Provider>
-        
+      </>
     )
 }
 

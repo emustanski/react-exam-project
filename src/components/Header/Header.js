@@ -2,7 +2,7 @@ import { useAuthContext } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const { isAuthenticated, userEmail } = useAuthContext()
+  const { isAuthenticated } = useAuthContext()
   return (
     <div>
       <section id="cta" className="jumbotron text-center">
@@ -53,7 +53,7 @@ export const Header = () => {
                 {isAuthenticated && (
                   <div className="navbar-nav">
                 <li className="nav-item">
-                <Link className="nav-link" to="/profile">Profile {userEmail}</Link>
+                <Link className="nav-link" to="/profile">Profile </Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" to="/create">Create</Link>
