@@ -32,6 +32,10 @@ export const Details = () => {
   }, [postId]);
 
   const onCommentSubmit = async (values) => {
+
+    if (values.comment === '' ) {
+      return alert('You can\'t submit empty comment')
+    }
     const response = await commentService.create(postId, values.comment);
 
     setPost(state => ({

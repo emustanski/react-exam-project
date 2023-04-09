@@ -1,6 +1,7 @@
 import { OwnedPostCard } from "./OwnedPostCard";
 import { useAuthContext } from "../../contexts/AuthContext";
 import { usePostContext } from "../../contexts/postContext";
+import { Link } from "react-router-dom";
 
 
 export const Profile = () => {
@@ -23,7 +24,13 @@ const myPosts = posts.filter(x => x._ownerId === userId)
             )
           )
         ) : (
-          <h4>There are no posts yet</h4>
+          <div className="newest-posts">
+          <h4>Oooops...</h4>
+          <hr className="invis1"/>
+          <h4>You don't have posts yet...</h4>
+          <hr className="invis1"/>
+          <Link to ={"/create"} className="btn btn-primary"> Create here</Link>
+          </div>
         )}
       </div>
     </div>
