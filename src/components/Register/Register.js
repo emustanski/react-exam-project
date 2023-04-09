@@ -28,7 +28,7 @@ export const Register = () => {
               </div>
               <div className="col-lg-7">
                 <div className="form-wrapper">
-                  <label>Email adress</label>
+                  <label>Email</label>
                   <input
                     type="email"
                     className="form-control"
