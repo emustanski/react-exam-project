@@ -139,6 +139,9 @@ h4 {
     background: rgba(0, 0, 0, 0) url(https://food.unl.edu/newsletters/images/food-groups.png) no-repeat scroll top center / cover;
     position: relative;
 }
+#not-found {
+    background: url(https://static.vecteezy.com/system/resources/previews/012/093/384/original/retro-browser-page-not-found-design-template-error-404-nostalgic-ui-retro-vaporwave-computer-interface-vector.jpg);
+}
 
 .sidebar .widget {
     padding: 2rem;

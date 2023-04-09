@@ -43,7 +43,7 @@ export const Create = () => {
                     onChange={changeHandler}
                     type="text"
                     className="form-control"
-                    placeholder=""
+                    placeholder="Link to your image"
                     name="imgUrl"
                     id="imgUrl"
                   />

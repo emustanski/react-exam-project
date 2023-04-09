@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 
-export const CatalogItem = ({ _id, title, imgUrl, description, }) => {
+export const CatalogItem = ({ post }) => {
+
+  const formattedTime = new Date(post._createdOn).toLocaleString();
+  console.log(post)
+
   return (
     <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
       <div className="page-wrapper">
@@ -8,8 +12,8 @@ export const CatalogItem = ({ _id, title, imgUrl, description, }) => {
           <div className="blog-box row">
             <div className="col-md-4">
               <div className="post-media">
-                <Link to={`/catalog/${_id}`} title="">
-                  <img src={imgUrl} alt="" className="img-fluid" />
+                <Link to={`/catalog/${post._id}`} title="">
+                  <img src={post.imgUrl} alt="" className="img-fluid" />
                   <div className="hovereffect"></div>
                 </Link>
               </div>
@@ -17,15 +21,14 @@ export const CatalogItem = ({ _id, title, imgUrl, description, }) => {
     
             <div className="blog-meta big-meta col-md-8">
               <h4>
-                <Link to={`/catalog/${_id}`} title="">
-                  {title}
+                <Link to={`/catalog/${post._id}`} title="">
+                  {post.title}
                 </Link>
               </h4>
               <div className="short-description">
-                <p>{description}</p>
+                <p>{post.description}</p>
               </div>
-              <small>11 July, 2017</small>
-              <small></small>
+              <small>{formattedTime}</small>
             </div>
           </div>
         </div>

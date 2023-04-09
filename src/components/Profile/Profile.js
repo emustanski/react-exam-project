@@ -1,42 +1,32 @@
-import { useEffect, useState } from "react";
-import { useAuthContext } from "../../contexts/AuthContext";
-
 import { OwnedPostCard } from "./OwnedPostCard";
-import { useNavigate } from "react-router-dom";
-import { postServiceFactory } from "../../services/postService";
-import { useService } from "../../hooks/useService";
+import { useAuthContext } from "../../contexts/AuthContext";
 import { usePostContext } from "../../contexts/postContext";
 
 
 export const Profile = () => {
   
-// const navigate = useNavigate();
-
-const { userId } = useAuthContext();
+const { userId, email } = useAuthContext();
 const { posts } = usePostContext();
-
-const myPosts = posts.filter( post => post._ownerId === userId)
-
-
-// useEffect(() => {
-//     postService.getUserPosts(userId)
-//         .then(result => {
-//             if (result.code === 404) {
-//                 result = [];
-//             }
-//             setMyPosts(state => state = result);
-//         }).catch(error => alert(error.message));
-// }, [userId]);
+const myPosts = posts.filter(x => x._ownerId === userId)
 
   return ( 
-  <section className="section lb text-muted">
+    <section className="section lb text-muted">
     <div className="container">
-        <div className="row grid-style">
-            {myPosts.length !== 0 ? 
-            myPosts.map(post => <OwnedPostCard key={post._id} {...post}/>) :
-            <h4>There are no posts yet</h4>}
-        </div>
-        </div>
+    <div className="newest-posts">
+        <h4> Hello, {email} ! </h4>
+      </div>
+      <div className="row grid-style">
+        {myPosts.length !== 0 ? (
+          myPosts.map((x) =>
+             (
+              <OwnedPostCard key={x._id} post={x} />
+            )
+          )
+        ) : (
+          <h4>There are no posts yet</h4>
+        )}
+      </div>
+    </div>
   </section>
   );
 }; 

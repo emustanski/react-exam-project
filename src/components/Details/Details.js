@@ -64,6 +64,8 @@ export const Details = () => {
     }
   };
 
+  const formattedTime = new Date(post._createdOn).toLocaleString();
+
   return (
     <section className="section">
       <div className="container">
@@ -82,7 +84,7 @@ export const Details = () => {
                 </div>
 
                 <div className="blog-meta big-meta">
-                  <small>21 July, 2017</small>
+                  <small>{formattedTime}</small>
                   <small>{email}</small>
                 </div>
               </div>
@@ -102,7 +104,7 @@ export const Details = () => {
                 </div>
               )}
 
-              <hr className="invis1" />
+              <hr className="invis1"/>
               { post.comments?.length >= 0 && (
               <div className="custombox clearfix">
                 <h4 className="small-title"> {post.comments.length} Comments </h4>
@@ -114,7 +116,7 @@ export const Details = () => {
                         <img alt=""/>
                         <div className="media-body">
                           <h4 className="media-heading user_name">
-                            {x.author.email} <small>5 days ago</small>
+                            {x.author.email}
                           </h4>
                           <p>
                             {x.comment}

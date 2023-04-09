@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export const Home = () => {
 
   const { posts } = usePostContext()
+
   return (
     <section className="section lb text-muted">
       <div className="newest-posts">
@@ -12,8 +13,9 @@ export const Home = () => {
       </div>
       <div className="container">
         <div className="row grid-style">
-          {posts.map((x) => (
-            <HomeCatalogItem key={x._id} {...x} />
+          
+          {posts.slice(-4).reverse().map(x => (
+            <HomeCatalogItem key={x._id} post={x} />
           ))}
 
           {posts.length === 0 && (

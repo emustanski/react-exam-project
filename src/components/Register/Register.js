@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import {  useAuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 import { useForm } from "../../hooks/useForm";
 
 export const Register = () => {
-  const { onRegisterSubmit } = useAuthContext()
+  const { onRegisterSubmit } = useContext(AuthContext);
   const { values, changeHandler, onSubmit } = useForm(
     {
       email: '',
       password: '',
       rePassword: '',
-      username: '',
     },
     onRegisterSubmit
   );
@@ -28,16 +28,6 @@ export const Register = () => {
               </div>
               <div className="col-lg-7">
                 <div className="form-wrapper">
-                  <label>Username</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Username"
-                    name="username"
-                    id="username"
-                    value={values.username}
-                    onChange={changeHandler}
-                  />
                   <label>Email adress</label>
                   <input
                     type="email"
