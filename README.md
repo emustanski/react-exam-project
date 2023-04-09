@@ -8,10 +8,14 @@ View all posts and all details them including comments but you will not be able 
 Create posts which you can edit or delete later, leave comments on all posts, check all created posts by you in your Profile Page. 
 ## Installation
 To run the project loccally you should :
+
 Clone this repository:
+
 Install the required dependencies using "npm install"
+
 Start the development serverr using "npm start"
+
 Open new terminal and navigate to : "cd server"
+
 Start the server using "node server.js"
  
-d
